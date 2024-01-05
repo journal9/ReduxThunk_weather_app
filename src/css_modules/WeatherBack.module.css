@@ -1,0 +1,15 @@
+.screen{
+    background-color: rgb(236, 249, 255);
+    height:100vh;
+    margin: 3rem;
+    z-index: 1;
+    position:static;
+}
+.back_screen{
+    background:URL('/public/images/weather-back.png');
+    width:100%;
+    height:100vh;
+    position:absolute;
+    z-index: 1;
+    background-size: cover;
+}

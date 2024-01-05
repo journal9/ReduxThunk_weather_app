@@ -1,0 +1,8 @@
+.w_body{
+    display: flex;
+    flex-direction: column;
+    margin:2rem;
+    margin-top:  6rem;
+    position: relative;
+    align-self: center;
+}
