@@ -2,7 +2,6 @@ import React, { useRef } from 'react'
 import classes from './Search.module.css'
 
 function Search({handleParam,handleSearchText}) {
-    console.log("ser")
     const bref = useRef(null);
 
     function handleSubmit(event){
