@@ -6,11 +6,12 @@ const initialState={
         'time':"",
         'temp':"",
         'humidity':"",
-        // 'wind_kph':"",
-        // 'condition':"",
-        // 'name':"",
-        // 'region':"",
-        // 'country':""
+        'wind_kph':"",
+        'condition':"",
+        'name':"",
+        'region':"",
+        'country':"",
+        'icon':""
     },
     'loading':false,
     'error':''
@@ -36,6 +37,13 @@ const weatherSlice = createSlice({
             state.data.time=action.payload.location.localtime
             state.data.temp=action.payload.current.feelslike_c
             state.data.humidity=action.payload.current.humidity
+            state.data.wind_kph=action.payload.current.wind_kph
+            state.data.condition=action.payload.current.condition.text
+            state.data.name=action.payload.location.name
+            state.data.region=action.payload.location.region
+            state.data.country=action.payload.location.country
+            state.data.icon=action.payload.current.condition.icon
+            state.loading=false
         })
         builder.addCase(fetchWeather.rejected,(state,action)=>{
             state.loading=false
